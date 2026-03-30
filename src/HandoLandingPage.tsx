@@ -21,6 +21,28 @@ const benefits = [
   },
 ];
 
+function LinkedInIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        fill="currentColor"
+        d="M6.94 8.5A1.56 1.56 0 1 1 6.94 5.38a1.56 1.56 0 0 1 0 3.12ZM8.3 18.5H5.58V9.55H8.3v8.95ZM18.42 18.5h-2.7v-4.35c0-1.04-.02-2.38-1.45-2.38-1.45 0-1.67 1.13-1.67 2.3v4.43H9.9V9.55h2.6v1.22h.04c.36-.69 1.25-1.42 2.57-1.42 2.75 0 3.26 1.81 3.26 4.16v4.99Z"
+      />
+    </svg>
+  );
+}
+
+function InstagramIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        fill="currentColor"
+        d="M7.75 3h8.5A4.75 4.75 0 0 1 21 7.75v8.5A4.75 4.75 0 0 1 16.25 21h-8.5A4.75 4.75 0 0 1 3 16.25v-8.5A4.75 4.75 0 0 1 7.75 3Zm0 1.8A2.95 2.95 0 0 0 4.8 7.75v8.5a2.95 2.95 0 0 0 2.95 2.95h8.5a2.95 2.95 0 0 0 2.95-2.95v-8.5a2.95 2.95 0 0 0-2.95-2.95h-8.5Zm8.95 1.35a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2ZM12 7.6A4.4 4.4 0 1 1 7.6 12 4.4 4.4 0 0 1 12 7.6Zm0 1.8A2.6 2.6 0 1 0 14.6 12 2.6 2.6 0 0 0 12 9.4Z"
+      />
+    </svg>
+  );
+}
+
 export default function HandoLandingPage() {
   return (
     <div className="page">
@@ -189,15 +211,37 @@ export default function HandoLandingPage() {
           <div className="container">
             <div className="section-copy section-copy-wide">
               <p className="section-label">Quiénes somos</p>
-              <h2>Construimos tecnología para mejorar la coordinación clínica en momentos donde la información importa de verdad.</h2>
-              <p>
-                Somos un equipo enfocado en desarrollar herramientas digitales para fortalecer la comunicación clínica, apoyar la continuidad asistencial y reducir
-                fricciones en la operación diaria de los equipos de salud.
-              </p>
-              <p>
-                Creemos que un mejor handover no solo mejora procesos: también protege decisiones, tiempos críticos y la experiencia de quienes cuidan pacientes todos
-                los días.
-              </p>
+            </div>
+
+            <div className="team-grid">
+              <article className="team-card">
+                <div>
+                  <h2 className="team-name">Felipe Jil Vargas</h2>
+                  <p className="team-role">CEO</p>
+                  <p className="team-role">Co Founder</p>
+                </div>
+                <div className="team-links" aria-label="Redes sociales de Felipe Jil Vargas">
+                  <a href="https://www.linkedin.com/in/felipejilvargas/" target="_blank" rel="noreferrer" aria-label="LinkedIn de Felipe Jil Vargas">
+                    <LinkedInIcon />
+                  </a>
+                  <a href="https://www.instagram.com/enfermeria_innovacion/" target="_blank" rel="noreferrer" aria-label="Instagram de Felipe Jil Vargas">
+                    <InstagramIcon />
+                  </a>
+                </div>
+              </article>
+
+              <article className="team-card">
+                <div>
+                  <h2 className="team-name">Ricardo Cáceres Villar</h2>
+                  <p className="team-role">COO</p>
+                  <p className="team-role">Co Founder</p>
+                </div>
+                <div className="team-links" aria-label="Redes sociales de Ricardo Cáceres Villar">
+                  <a href="https://www.linkedin.com/in/ricardocaceresvillar/" target="_blank" rel="noreferrer" aria-label="LinkedIn de Ricardo Cáceres Villar">
+                    <LinkedInIcon />
+                  </a>
+                </div>
+              </article>
             </div>
           </div>
         </section>
@@ -205,11 +249,11 @@ export default function HandoLandingPage() {
         <section id="contacto" className="section contact-section">
           <div className="container contact-grid">
             <div className="section-copy">
-              <p className="contact-label">Contacto</p>
-              <h2>Conversemos sobre cómo Hando puede apoyar a tu equipo.</h2>
-              <p>
-                Si estás explorando soluciones para handover clínico, continuidad asistencial o coordinación de equipos de salud, estamos disponibles para conversar.
-              </p>
+              <div className="contact-brand">
+                <img src="/hando-logo.png" alt="Logo de Hando" className="contact-brand-mark" />
+                <span className="contact-brand-name">HANDO</span>
+              </div>
+              <h2 className="contact-title">Conversemos sobre cómo Hando puede apoyar a tu equipo.</h2>
             </div>
 
             <div className="contact-card">
@@ -217,16 +261,9 @@ export default function HandoLandingPage() {
                 <p className="contact-card-title">Correo</p>
                 <p>contacto@hando.health</p>
               </div>
-              <div>
-                <p className="contact-card-title">Empresa</p>
-                <p>Hando</p>
-              </div>
-              <div>
-                <p className="contact-card-title">Enfoque</p>
-                <p>Continuidad clínica, coordinación asistencial y seguridad del paciente</p>
-              </div>
             </div>
           </div>
+          <footer className="site-footer">2026 Hando. Todos los derechos reservados.</footer>
         </section>
       </main>
     </div>
