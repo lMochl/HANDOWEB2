@@ -1,23 +1,61 @@
-const benefits = [
+import {
+  ArrowRight,
+  BadgeCheck,
+  ChartNoAxesColumnIncreasing,
+  ClipboardList,
+  CircleAlert,
+  CircleCheck,
+  Clock3,
+  MapPin,
+  Network,
+  ShieldCheck,
+  Sparkles,
+  TriangleAlert,
+  UserRound,
+} from "lucide-react";
+
+const approachPoints = [
+  "Estructuracion de informacion clinica relevante entre turnos",
+  "Mayor visibilidad de novedades, pendientes y continuidad",
+  "Apoyo a la coordinacion asistencial con foco operativo",
+  "Base para aprendizaje y mejora continua del equipo",
+];
+
+const capabilities = [
   {
     title: "Seguridad del paciente",
     description:
-      "Estandariza la entrega clínica para reducir omisiones, mejorar la continuidad y disminuir riesgos por información fragmentada.",
+      "Estandariza la entrega clinica para reducir omisiones, mejorar la continuidad y disminuir riesgos por informacion fragmentada.",
+    tone: "a",
   },
   {
     title: "Trazabilidad y orden",
     description:
-      "Centraliza la información relevante del turno con registros claros, seguimiento y mayor visibilidad operativa.",
+      "Centraliza la informacion relevante del turno con registros claros, seguimiento y mayor visibilidad operativa.",
+    tone: "b",
   },
   {
     title: "Eficiencia del equipo",
     description:
-      "Facilita la coordinación entre profesionales y ayuda a que los equipos dediquen menos tiempo a buscar información dispersa.",
+      "Facilita la coordinacion entre profesionales y ayuda a que los equipos dediquen menos tiempo a buscar informacion dispersa.",
+    tone: "c",
+  },
+];
+
+const teamMembers = [
+  {
+    role: "CEO | CO FOUNDER",
+    name: "Felipe Jil Vargas",
+    text: "",
+    image: "/1764635220247.webp",
+    linkedin: "https://www.linkedin.com/in/felipejilvargas/",
   },
   {
-    title: "Mejora continua",
-    description:
-      "Genera retroalimentación útil a partir de la práctica clínica cotidiana para apoyar aprendizaje, consistencia y desempeño.",
+    role: "COO | CO FOUNDER",
+    name: "Ricardo Caceres Villar",
+    text: "",
+    image: "/1586991134800.webp",
+    linkedin: "https://www.linkedin.com/in/ricardocaceresvillar/",
   },
 ];
 
@@ -32,240 +70,291 @@ function LinkedInIcon() {
   );
 }
 
-function InstagramIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path
-        fill="currentColor"
-        d="M7.75 3h8.5A4.75 4.75 0 0 1 21 7.75v8.5A4.75 4.75 0 0 1 16.25 21h-8.5A4.75 4.75 0 0 1 3 16.25v-8.5A4.75 4.75 0 0 1 7.75 3Zm0 1.8A2.95 2.95 0 0 0 4.8 7.75v8.5a2.95 2.95 0 0 0 2.95 2.95h8.5a2.95 2.95 0 0 0 2.95-2.95v-8.5a2.95 2.95 0 0 0-2.95-2.95h-8.5Zm8.95 1.35a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2ZM12 7.6A4.4 4.4 0 1 1 7.6 12 4.4 4.4 0 0 1 12 7.6Zm0 1.8A2.6 2.6 0 1 0 14.6 12 2.6 2.6 0 0 0 12 9.4Z"
-      />
-    </svg>
-  );
+function FeatureIcon({ tone }: { tone: "a" | "b" | "c" | "d" }) {
+  if (tone === "a") {
+    return <ShieldCheck aria-hidden="true" strokeWidth={1.9} />;
+  }
+
+  if (tone === "b") {
+    return <Network aria-hidden="true" strokeWidth={1.9} />;
+  }
+
+  if (tone === "c") {
+    return <Clock3 aria-hidden="true" strokeWidth={1.9} />;
+  }
+
+  return <ChartNoAxesColumnIncreasing aria-hidden="true" strokeWidth={1.9} />;
 }
 
 export default function HandoLandingPage() {
   return (
-    <div className="page">
-      <header className="site-header">
-        <div className="container header-inner">
-          <div className="brand">
-            <img className="brand-mark" src="/hando-logo.png" alt="Logo de Hando" />
-            <div>
-              <p className="brand-name">Hando</p>
-              <p className="brand-tagline">Clinical handover intelligence</p>
-            </div>
-          </div>
-          <nav className="site-nav">
-            <a href="#problema">Problema</a>
-            <a href="#solucion">Solución</a>
-            <a href="#quienes-somos">Quiénes somos</a>
-            <a href="#contacto">Contacto</a>
+    <div className="hando-page">
+      <header className="topbar">
+        <div className="shell topbar-inner">
+          <a href="#problema" className="brand" aria-label="Ir al inicio de Hando">
+            <img src="/hando-logo.webp" alt="Logo de Hando" className="brand-logo" />
+            <span className="brand-name">Hando</span>
+          </a>
+
+          <nav className="main-nav" aria-label="Navegacion principal">
+            <a href="#problema">
+              Problema
+            </a>
+            <a href="#solucion">Solucion</a>
+            <a href="#equipo">Equipo</a>
           </nav>
+
+          <a href="#contacto" className="nav-contact-btn">
+            Contacto
+          </a>
         </div>
       </header>
 
       <main>
-        <section className="hero">
-          <div className="hero-bg" />
-          <div className="container hero-grid">
+        <section id="problema" className="hero-section">
+          <div className="shell hero-grid">
             <div className="hero-copy">
-              <div className="eyebrow-pill">Tecnología para continuidad clínica y seguridad del paciente</div>
-              <h1>La calidad del handover también es seguridad del paciente.</h1>
-              <p>
-                Hando ayuda a los equipos de salud a estructurar, centralizar y dar continuidad a la información clínica crítica entre turnos,
-                reduciendo pérdidas de información y mejorando la coordinación asistencial.
+              <p className="hero-pill">
+                <span className="hero-pill-dot" aria-hidden="true" />
+                AI-POWERED HANDOVER
+              </p>
+              <h1>La calidad del handover tambien es seguridad del paciente.</h1>
+              <p className="hero-text">
+                Hando ayuda a los equipos de salud a estructurar, centralizar y dar continuidad a la informacion clinica critica entre turnos,
+                reduciendo perdidas de informacion y mejorando la coordinacion asistencial.
               </p>
               <div className="hero-actions">
-                <a className="btn btn-primary" href="#contacto">
-                  Solicitar contacto
+                <a href="#contacto" className="cta-btn cta-primary">
+                  <span>Solicitar contacto</span>
+                  <ArrowRight aria-hidden="true" strokeWidth={1.9} />
                 </a>
-                <a className="btn btn-secondary" href="#solucion">
+                <a href="#solucion" className="cta-btn cta-secondary">
                   Conocer Hando
                 </a>
               </div>
             </div>
 
-            <div className="hero-card-wrap">
-              <div className="hero-card">
-                <div className="info-card muted">
-                  <p className="info-title">Problema frecuente</p>
-                  <p>Información crítica repartida entre cuadernos, WhatsApp, memoria del equipo y registros dispersos.</p>
+            <article className="patient-panel" aria-label="Resumen de paciente en plataforma Hando">
+              <div className="patient-row patient-main-row">
+                <div>
+                  <p className="patient-title patient-title-row">
+                    <span className="patient-head-icon" aria-hidden="true">
+                      <UserRound strokeWidth={1.8} />
+                    </span>
+                    Paciente: Martinez, R.
+                  </p>
+                  <p className="patient-subtitle">Cama 402 • Ingreso: 12h</p>
                 </div>
-                <div className="info-card teal">
-                  <p className="info-title">Lo que buscamos cambiar</p>
-                  <p>Un handover más claro, trazable y útil para la toma de decisiones clínicas y la continuidad del cuidado.</p>
+                <span className="patient-tag">AI Synthesized</span>
+              </div>
+
+              <div className="patient-risk">
+                <p className="risk-label">
+                  <TriangleAlert aria-hidden="true" strokeWidth={1.9} />
+                  Riesgo Detectado por IA
+                </p>
+                <p>Posible interaccion farmacologica: Heparina + AINES. Requiere revision de dosis antes del turno de noche.</p>
+              </div>
+
+              <div className="vitals-grid">
+                <div>
+                  <p>FC (lpm)</p>
+                  <strong>84</strong>
                 </div>
-                <div className="metric-grid">
-                  <div className="metric-card">
-                    <p className="metric-title">Continuidad</p>
-                    <p>Mejor transferencia de información entre equipos y turnos.</p>
-                  </div>
-                  <div className="metric-card">
-                    <p className="metric-title">Trazabilidad</p>
-                    <p>Mayor claridad sobre qué se registró y qué quedó pendiente.</p>
-                  </div>
+                <div>
+                  <p>PA (mmHg)</p>
+                  <strong>120/80</strong>
+                </div>
+                <div>
+                  <p>SpO2 (%)</p>
+                  <strong>98</strong>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
 
-        <section id="problema" className="section section-soft section-bordered">
-          <div className="container">
-            <div className="section-copy section-copy-wide">
-              <p className="section-label">El problema</p>
-              <h2>Cuando el handover falla, el riesgo no es administrativo. Es clínico.</h2>
-              <p>
-                En muchos entornos asistenciales, la información relevante del turno sigue circulando en formatos fragmentados. Eso dificulta la continuidad,
-                aumenta la dependencia de la memoria individual y expone al equipo a omisiones evitables.
-              </p>
-            </div>
-            <div className="card-grid thirds">
-              {[
-                "Información dispersa entre múltiples canales",
-                "Dificultad para seguir pendientes y novedades relevantes",
-                "Menor estandarización en entregas de turno críticas",
-              ].map((item) => (
-                <div key={item} className="surface-card">
-                  {item}
+              <div className="care-plan">
+                <p className="care-title">Plan de Cuidado - Proximas 8h</p>
+                <div className="care-row">
+                  <p>Control de laboratorios</p>
+                  <span>18:00</span>
                 </div>
-              ))}
+                <div className="care-row">
+                  <p>Ajuste de fluidoterapia</p>
+                  <span>22:00</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section className="risk-section">
+          <div className="shell">
+            <div className="risk-copy">
+              <h2>Cuando el handover falla, el riesgo es clinico.</h2>
+              <p>
+                La fragmentacion de la informacion durante los cambios de turno es una de las principales causas de eventos adversos prevenibles en
+                entornos hospitalarios.
+              </p>
+            </div>
+
+            <div className="risk-grid">
+              <article className="risk-card fragmented-card">
+                <p className="card-pill card-pill-alert">
+                  <CircleAlert aria-hidden="true" strokeWidth={1.9} />
+                  El Status Quo
+                </p>
+                <ClipboardList className="fragmented-watermark" aria-hidden="true" strokeWidth={1.6} />
+                <h3>Informacion Fragmentada</h3>
+                <p className="risk-description">Notas aisladas, mensajes de texto no oficiales y sistemas desconectados generan lagunas cognitivas peligrosas.</p>
+                <div className="fragmented-notes">
+                  <span className="note note-yellow">Revisar potasio cama 3, estaba bajo ayer... creo.</span>
+                  <span className="note note-gray">WhatsApp - 14:32 Le pasamos medicación a la Sra. Gomez pero no lo anoté en sistema, te aviso por acá.</span>
+                  <span className="system-alert">
+                    ALERTA DE SISTEMA (IGNORADA)
+                    <br />
+                    ERR_SYNC: Data mismatch in patient vitals log_id
+                  </span>
+                </div>
+              </article>
+
+              <article className="risk-card impact-card">
+                <FeatureIcon tone="d" />
+                <p className="impact-value">80%</p>
+                <h3>De errores medicos graves</h3>
+                <p>
+                  Involucran fallas de comunicacion durante la transferencia de pacientes, segun la Joint Commission. Un handover ineficiente
+                  cuesta tiempo, recursos y vidas.
+                </p>
+              </article>
             </div>
           </div>
         </section>
 
-        <section id="solucion" className="section">
-          <div className="container split-grid">
-            <div className="section-copy">
-              <p className="section-label">La solución</p>
-              <h2>Una capa digital para ordenar y fortalecer el handover clínico.</h2>
-              <p>
-                Hando está diseñado para apoyar la entrega clínica con una estructura más clara, trazable y operativamente útil. Nuestro enfoque pone el acento
-                en la seguridad del paciente, la continuidad del cuidado y la coordinación de equipos de salud.
-              </p>
+        <section id="solucion" className="solution-section">
+          <div className="shell">
+            <div className="solution-intro">
+              <h2>Una capa digital para ordenar y fortalecer el handover clinico.</h2>
             </div>
-            <div className="dark-panel">
-              <p className="dark-label">Enfoque Hando</p>
-              <ul>
-                <li>Estructuración de información clínica relevante entre turnos</li>
-                <li>Mayor visibilidad de novedades, pendientes y continuidad</li>
-                <li>Apoyo a la coordinación asistencial con foco operativo</li>
-                <li>Base para aprendizaje y mejora continua del equipo</li>
+
+            <article className="focus-board">
+              <div className="focus-left">
+                <p className="focus-pill">
+                  <Sparkles aria-hidden="true" strokeWidth={1.9} />
+                  Enfoque Hando
+                </p>
+                <p>
+                  Hando esta disenado para apoyar la entrega clinica con una estructura mas clara, trazable y operativamente util. Nuestro
+                  enfoque pone el acento en la seguridad del paciente, la continuidad del cuidado y la coordinacion de equipos de salud.
+                </p>
+              </div>
+              <ul className="focus-list">
+                {approachPoints.map((point) => (
+                  <li key={point}>
+                    <CircleCheck aria-hidden="true" strokeWidth={1.9} />
+                    <span>{point}</span>
+                  </li>
+                ))}
               </ul>
-            </div>
-          </div>
-        </section>
+            </article>
 
-        <section className="section section-bordered">
-          <div className="container">
-            <div className="section-copy section-copy-wide">
-              <p className="section-label">Beneficios</p>
-              <h2>Tecnología diseñada para equipos clínicos que necesitan claridad, continuidad y confianza.</h2>
+            <div className="solution-copy">
+              <h2>Tecnologia disenada para equipos clinicos que necesitan claridad, continuidad y confianza.</h2>
             </div>
-            <div className="card-grid quarters">
-              {benefits.map((benefit) => (
-                <div key={benefit.title} className="surface-card benefit-card">
-                  <h3>{benefit.title}</h3>
-                  <p>{benefit.description}</p>
-                </div>
+
+            <div className="benefits-grid">
+              {capabilities.map((item, index) => (
+                <article key={item.title} className={`benefit-card benefit-card-${index + 1}`}>
+                  <div className={`icon-badge icon-${item.tone}`}>
+                    <FeatureIcon tone={item.tone as "a" | "b" | "c" | "d"} />
+                  </div>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </article>
               ))}
+
+              <article className="benefit-card benefit-card-wide">
+                <div className="wide-content">
+                  <h3>Mejora continua</h3>
+                  <p>
+                    Genera retroalimentacion util a partir de la practica clinica cotidiana para apoyar aprendizaje, consistencia y desempeno.
+                  </p>
+                  <p className="wide-chip">
+                    <BadgeCheck aria-hidden="true" strokeWidth={1.9} />
+                    Retroalimentacion inteligente
+                  </p>
+                </div>
+                <div className="chart-card" aria-hidden="true">
+                  <div className="chart-bars">
+                    <span style={{ height: "42%" }} />
+                    <span style={{ height: "64%" }} />
+                    <span style={{ height: "83%" }} />
+                  </div>
+                </div>
+              </article>
             </div>
           </div>
         </section>
 
-        <section className="section section-soft">
-          <div className="container dual-panels">
-            <div className="gradient-panel">
-              <div className="panel-horizontal">
-                <div className="panel-copy panel-copy-title">
-                  <p className="section-label">Retroalimentación inteligente</p>
-                  <h2>Más que registrar: transformar la práctica diaria en aprendizaje útil.</h2>
-                </div>
-                <div className="panel-copy panel-copy-body">
-                  <p>
-                    Nuestros productos también buscan generar retroalimentaciones personalizadas a partir de la práctica clínica de los funcionarios de salud,
-                    ayudando a identificar patrones, reforzar buenas prácticas y apoyar procesos de mejora continua.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="surface-panel support-panel">
-              <div className="panel-horizontal">
-                <div className="panel-copy">
-                  <p className="support-label">Respaldo</p>
-                  <h2>Un proyecto impulsado con visión de innovación en salud.</h2>
-                  <p>
-                    Hando ha sido apoyado por el programa Start-Up Chile de Corfo, fortaleciendo el desarrollo de una propuesta tecnológica enfocada en continuidad
-                    clínica, eficiencia operativa y seguridad del paciente.
-                  </p>
-                </div>
-                <div className="panel-side panel-side-dark">
-                  <img src="/startup-chile-blanco.png" alt="Start-Up Chile by Corfo" className="support-logo" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="quienes-somos" className="section section-bordered">
-          <div className="container">
-            <div className="section-copy section-copy-wide">
-              <p className="section-label">Quiénes somos</p>
+        <section id="equipo" className="team-section">
+          <div className="shell">
+            <div className="team-copy">
+              <h2>Quienes somos</h2>
+              <p>Conoce al equipo detras de Hando</p>
             </div>
 
             <div className="team-grid">
-              <article className="team-card">
-                <div>
-                  <h2 className="team-name">Felipe Jil Vargas</h2>
-                  <p className="team-role">CEO</p>
-                  <p className="team-role">Co Founder</p>
-                </div>
-                <div className="team-links" aria-label="Redes sociales de Felipe Jil Vargas">
-                  <a href="https://www.linkedin.com/in/felipejilvargas/" target="_blank" rel="noreferrer" aria-label="LinkedIn de Felipe Jil Vargas">
-                    <LinkedInIcon />
-                  </a>
-                  <a href="https://www.instagram.com/enfermeria_innovacion/" target="_blank" rel="noreferrer" aria-label="Instagram de Felipe Jil Vargas">
-                    <InstagramIcon />
-                  </a>
-                </div>
-              </article>
-
-              <article className="team-card">
-                <div>
-                  <h2 className="team-name">Ricardo Cáceres Villar</h2>
-                  <p className="team-role">COO</p>
-                  <p className="team-role">Co Founder</p>
-                </div>
-                <div className="team-links" aria-label="Redes sociales de Ricardo Cáceres Villar">
-                  <a href="https://www.linkedin.com/in/ricardocaceresvillar/" target="_blank" rel="noreferrer" aria-label="LinkedIn de Ricardo Cáceres Villar">
-                    <LinkedInIcon />
-                  </a>
-                </div>
-              </article>
+              {teamMembers.map((member, index) => (
+                <article key={`${member.name}-${index}`} className="team-card">
+                  <div className="member-avatar">
+                    <img src={member.image} alt={`Foto de ${member.name}`} className="member-avatar-image" loading="lazy" />
+                  </div>
+                  <p className="member-role">{member.role}</p>
+                  <div className="member-name-row">
+                    <h3>{member.name}</h3>
+                    <a href={member.linkedin} target="_blank" rel="noreferrer" aria-label={`LinkedIn de ${member.name}`} className="member-link">
+                      <LinkedInIcon />
+                    </a>
+                  </div>
+                </article>
+              ))}
             </div>
           </div>
         </section>
 
-        <section id="contacto" className="section contact-section">
-          <div className="container contact-grid">
-            <div className="section-copy">
-              <div className="contact-brand">
-                <img src="/hando-logo.png" alt="Logo de Hando" className="contact-brand-mark" />
-                <span className="contact-brand-name">HANDO</span>
-              </div>
-              <h2 className="contact-title">Conversemos sobre cómo Hando puede apoyar a tu equipo.</h2>
-            </div>
+        <section className="support-strip">
+          <div className="shell support-inner">
+            <p>RESPALDO</p>
+            <img src="/startup-chile-blanco.webp" alt="Start-Up Chile" className="support-logo" />
+          </div>
+        </section>
 
+        <section id="contacto" className="contact-section">
+          <div className="shell">
             <div className="contact-card">
-              <div>
-                <p className="contact-card-title">Correo</p>
-                <p>contacto@hando.health</p>
+              <aside className="contact-aside">
+                <h2>Conversemos sobre como Hando puede apoyar a tu equipo.</h2>
+                <p className="contact-line">
+                  <MapPin aria-hidden="true" strokeWidth={1.8} />
+                  Santiago, Chile
+                </p>
+              </aside>
+
+              <div className="contact-email-panel" aria-label="Correo de contacto">
+                <p className="contact-email-kicker">Correo de contacto</p>
+                <a href="mailto:contacto@hando.cl" className="contact-email-link">
+                  contacto@hando.cl
+                </a>
               </div>
             </div>
           </div>
-          <footer className="site-footer">2026 Hando. Todos los derechos reservados.</footer>
         </section>
       </main>
+
+      <footer className="site-footer">
+        <div className="shell footer-inner">
+          <p className="footer-brand">Hando</p>
+          <p>© 2026 Hando. Todos los derechos reservados.</p>
+        </div>
+      </footer>
     </div>
   );
 }
