@@ -218,11 +218,11 @@ export default function HandoLandingPage() {
 
               <article className="risk-card impact-card">
                 <FeatureIcon tone="d" />
-                <p className="impact-value">80%</p>
-                <h3>De errores medicos graves</h3>
+                <p className="impact-value">Hasta 80%</p>
+                <h3>De los errores médicos graves</h3>
                 <p>
-                  Involucran fallas de comunicacion durante la transferencia de pacientes, segun la Joint Commission. Un handover ineficiente
-                  cuesta tiempo, recursos y vidas.
+                  Involucran fallas de comunicacion durante transferencias de cuidados, segun estimaciones de The Joint Commission. Un handover ineficiente
+                  retrasa decisiones, consume recursos y puede comprometer vidas.
                 </p>
               </article>
             </div>
