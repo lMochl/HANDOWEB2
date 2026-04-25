@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 
 const approachPoints = [
-  "Estructuracion de informacion clinica relevante entre turnos",
+  "Estructuración de información clínica relevante entre turnos",
   "Mayor visibilidad de novedades, pendientes y continuidad",
   "Apoyo a la coordinacion asistencial con foco operativo",
   "Base para aprendizaje y mejora continua del equipo",
@@ -25,19 +25,19 @@ const capabilities = [
   {
     title: "Seguridad del paciente",
     description:
-      "Estandariza la entrega clinica para reducir omisiones, mejorar la continuidad y disminuir riesgos por informacion fragmentada.",
+      "Estandariza la entrega clínica para reducir omisiones, mejorar la continuidad y disminuir riesgos por información fragmentada.",
     tone: "a",
   },
   {
     title: "Trazabilidad y orden",
     description:
-      "Centraliza la informacion relevante del turno con registros claros, seguimiento y mayor visibilidad operativa.",
+      "Centraliza la información relevante del turno con registros claros, seguimiento y mayor visibilidad operativa.",
     tone: "b",
   },
   {
     title: "Eficiencia del equipo",
     description:
-      "Facilita la coordinacion entre profesionales y ayuda a que los equipos dediquen menos tiempo a buscar informacion dispersa.",
+      "Facilita la coordinación entre profesionales y ayuda a que los equipos dediquen menos tiempo a buscar información dispersa.",
     tone: "c",
   },
 ];
@@ -52,7 +52,7 @@ const teamMembers = [
   },
   {
     role: "COO | CO FOUNDER",
-    name: "Ricardo Caceres Villar",
+    name: "Ricardo Cáceres Villar",
     text: "",
     image: "/1586991134800.webp",
     linkedin: "https://www.linkedin.com/in/ricardocaceresvillar/",
@@ -96,7 +96,7 @@ export default function HandoLandingPage() {
             <span className="brand-name">Hando</span>
           </a>
 
-          <nav className="main-nav" aria-label="Navegacion principal">
+          <nav className="main-nav" aria-label="Navegación principal">
             <a href="#problema">
               Problema
             </a>
@@ -120,8 +120,8 @@ export default function HandoLandingPage() {
               </p>
               <h1>La calidad del handover tambien es seguridad del paciente.</h1>
               <p className="hero-text">
-                Hando ayuda a los equipos de salud a estructurar, centralizar y dar continuidad a la informacion clinica critica entre turnos,
-                reduciendo perdidas de informacion y mejorando la coordinacion asistencial.
+                Hando ayuda a los equipos de salud a estructurar, centralizar y dar continuidad a la informacion clínica crítica entre turnos,
+                reduciendo perdidas de información y mejorando la coordinacion asistencial.
               </p>
               <div className="hero-actions">
                 <a href="#contacto" className="cta-btn cta-primary">
@@ -189,9 +189,9 @@ export default function HandoLandingPage() {
         <section className="risk-section">
           <div className="shell">
             <div className="risk-copy">
-              <h2>Cuando el handover falla, el riesgo es clinico.</h2>
+              <h2>Cuando el handover falla, el riesgo es clínico.</h2>
               <p>
-                La fragmentacion de la informacion durante los cambios de turno es una de las principales causas de eventos adversos prevenibles en
+                La fragmentación de la información durante los cambios de turno es una de las principales causas de eventos adversos prevenibles en
                 entornos hospitalarios.
               </p>
             </div>
@@ -203,11 +203,11 @@ export default function HandoLandingPage() {
                   El Status Quo
                 </p>
                 <ClipboardList className="fragmented-watermark" aria-hidden="true" strokeWidth={1.6} />
-                <h3>Informacion Fragmentada</h3>
+                <h3>Información Fragmentada</h3>
                 <p className="risk-description">Notas aisladas, mensajes de texto no oficiales y sistemas desconectados generan lagunas cognitivas peligrosas.</p>
                 <div className="fragmented-notes">
                   <span className="note note-yellow">Revisar potasio cama 3, estaba bajo ayer... creo.</span>
-                  <span className="note note-gray">WhatsApp - 14:32 Le pasamos medicación a la Sra. Gomez pero no lo anoté en sistema, te aviso por acá.</span>
+                  <span className="note note-gray">WhatsApp - 14:32 Le pasamos medicación a la Sra. Gómez pero no lo anoté en sistema, te aviso por acá.</span>
                   <span className="system-alert">
                     ALERTA DE SISTEMA (IGNORADA)
                     <br />
@@ -232,7 +232,7 @@ export default function HandoLandingPage() {
         <section id="solucion" className="solution-section">
           <div className="shell">
             <div className="solution-intro">
-              <h2>Una capa digital para ordenar y fortalecer el handover clinico.</h2>
+              <h2>Una capa digital para ordenar y fortalecer el handover clínico.</h2>
             </div>
 
             <article className="focus-board">
@@ -242,8 +242,8 @@ export default function HandoLandingPage() {
                   Enfoque Hando
                 </p>
                 <p>
-                  Hando esta disenado para apoyar la entrega clinica con una estructura mas clara, trazable y operativamente util. Nuestro
-                  enfoque pone el acento en la seguridad del paciente, la continuidad del cuidado y la coordinacion de equipos de salud.
+                  Hando esta diseñado para apoyar la entrega clínica con una estructura mas clara, trazable y operativamente útil. Nuestro
+                  enfoque pone el acento en la seguridad del paciente, la continuidad del cuidado y la coordinación de equipos de salud.
                 </p>
               </div>
               <ul className="focus-list">
@@ -257,7 +257,7 @@ export default function HandoLandingPage() {
             </article>
 
             <div className="solution-copy">
-              <h2>Tecnologia disenada para equipos clinicos que necesitan claridad, continuidad y confianza.</h2>
+              <h2>Tecnología diseñada para equipos clínicos que necesitan claridad, continuidad y confianza.</h2>
             </div>
 
             <div className="benefits-grid">
@@ -275,7 +275,7 @@ export default function HandoLandingPage() {
                 <div className="wide-content">
                   <h3>Mejora continua</h3>
                   <p>
-                    Genera retroalimentacion util a partir de la practica clinica cotidiana para apoyar aprendizaje, consistencia y desempeno.
+                    Genera retroalimentacion útil a partir de la practica clínica cotidiana para apoyar aprendizaje, consistencia y desempeño.
                   </p>
                   <p className="wide-chip">
                     <BadgeCheck aria-hidden="true" strokeWidth={1.9} />
@@ -331,7 +331,7 @@ export default function HandoLandingPage() {
           <div className="shell">
             <div className="contact-card">
               <aside className="contact-aside">
-                <h2>Conversemos sobre como Hando puede apoyar a tu equipo.</h2>
+                <h2>Conversemos sobre cómo Hando puede apoyar a tu equipo.</h2>
                 <p className="contact-line">
                   <MapPin aria-hidden="true" strokeWidth={1.8} />
                   Santiago, Chile
