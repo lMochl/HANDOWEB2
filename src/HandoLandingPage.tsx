@@ -17,7 +17,7 @@ import {
 const approachPoints = [
   "Estructuración de información clínica relevante entre turnos",
   "Mayor visibilidad de novedades, pendientes y continuidad",
-  "Apoyo a la coordinacion asistencial con foco operativo",
+  "Apoyo a la coordinación asistencial con foco operativo",
   "Base para aprendizaje y mejora continua del equipo",
 ];
 
@@ -100,7 +100,7 @@ export default function HandoLandingPage() {
             <a href="#problema">
               Problema
             </a>
-            <a href="#solucion">Solucion</a>
+            <a href="#solucion">Solución</a>
             <a href="#equipo">Equipo</a>
           </nav>
 
@@ -118,10 +118,10 @@ export default function HandoLandingPage() {
                 <span className="hero-pill-dot" aria-hidden="true" />
                 AI-POWERED HANDOVER
               </p>
-              <h1>La calidad del handover tambien es seguridad del paciente.</h1>
+              <h1>La calidad del handover también es seguridad del paciente.</h1>
               <p className="hero-text">
-                Hando ayuda a los equipos de salud a estructurar, centralizar y dar continuidad a la informacion clínica crítica entre turnos,
-                reduciendo perdidas de información y mejorando la coordinacion asistencial.
+                Hando ayuda a los equipos de salud a estructurar, centralizar y dar continuidad a la información clínica crítica entre turnos,
+                reduciendo perdidas de información y mejorando la coordinación asistencial.
               </p>
               <div className="hero-actions">
                 <a href="#contacto" className="cta-btn cta-primary">
@@ -141,9 +141,9 @@ export default function HandoLandingPage() {
                     <span className="patient-head-icon" aria-hidden="true">
                       <UserRound strokeWidth={1.8} />
                     </span>
-                    Paciente: Martinez, R.
+                    Paciente: Martínez, R.
                   </p>
-                  <p className="patient-subtitle">Cama 402 • Ingreso: 12h</p>
+                  <p className="patient-subtitle">Cama 402 • Ingreso: 12 h</p>
                 </div>
                 <span className="patient-tag">AI Synthesized</span>
               </div>
@@ -153,7 +153,7 @@ export default function HandoLandingPage() {
                   <TriangleAlert aria-hidden="true" strokeWidth={1.9} />
                   Riesgo Detectado por IA
                 </p>
-                <p>Posible interaccion farmacologica: Heparina + AINES. Requiere revision de dosis antes del turno de noche.</p>
+                <p>Posible interacción farmacológica: Heparina + AINES. Requiere revisión de dosis antes del turno de noche.</p>
               </div>
 
               <div className="vitals-grid">
@@ -172,7 +172,7 @@ export default function HandoLandingPage() {
               </div>
 
               <div className="care-plan">
-                <p className="care-title">Plan de Cuidado - Proximas 8h</p>
+                <p className="care-title">Plan de Cuidado - Proximas 8 h</p>
                 <div className="care-row">
                   <p>Control de laboratorios</p>
                   <span>18:00</span>
@@ -207,7 +207,7 @@ export default function HandoLandingPage() {
                 <p className="risk-description">Notas aisladas, mensajes de texto no oficiales y sistemas desconectados generan lagunas cognitivas peligrosas.</p>
                 <div className="fragmented-notes">
                   <span className="note note-yellow">Revisar potasio cama 3, estaba bajo ayer... creo.</span>
-                  <span className="note note-gray">WhatsApp - 14:32 Le pasamos medicación a la Sra. Gómez pero no lo anoté en sistema, te aviso por acá.</span>
+                  <span className="note note-gray">WhatsApp - 14:32 Le pasamos medicación a la Sra. Gómez, pero no lo anoté en sistema, te aviso por acá.</span>
                   <span className="system-alert">
                     ALERTA DE SISTEMA (IGNORADA)
                     <br />
@@ -221,7 +221,7 @@ export default function HandoLandingPage() {
                 <p className="impact-value">Hasta 80%</p>
                 <h3>De los errores médicos graves</h3>
                 <p>
-                  Involucran fallas de comunicacion durante transferencias de cuidados, segun estimaciones de The Joint Commission. Un handover ineficiente
+                  Involucran fallas de comunicación durante transferencias de cuidados, según estimaciones de The Joint Commission. Un handover ineficiente
                   retrasa decisiones, consume recursos y puede comprometer vidas.
                 </p>
               </article>
@@ -242,7 +242,7 @@ export default function HandoLandingPage() {
                   Enfoque Hando
                 </p>
                 <p>
-                  Hando esta diseñado para apoyar la entrega clínica con una estructura mas clara, trazable y operativamente útil. Nuestro
+                  Hando está diseñado para apoyar la entrega clínica con una estructura más clara, trazable y operativamente útil. Nuestro
                   enfoque pone el acento en la seguridad del paciente, la continuidad del cuidado y la coordinación de equipos de salud.
                 </p>
               </div>
@@ -275,11 +275,11 @@ export default function HandoLandingPage() {
                 <div className="wide-content">
                   <h3>Mejora continua</h3>
                   <p>
-                    Genera retroalimentacion útil a partir de la practica clínica cotidiana para apoyar aprendizaje, consistencia y desempeño.
+                    Genera retroalimentación útil a partir de la práctica clínica cotidiana para apoyar aprendizaje, consistencia y desempeño.
                   </p>
                   <p className="wide-chip">
                     <BadgeCheck aria-hidden="true" strokeWidth={1.9} />
-                    Retroalimentacion inteligente
+                    Retroalimentación inteligente
                   </p>
                 </div>
                 <div className="chart-card" aria-hidden="true">
@@ -298,7 +298,7 @@ export default function HandoLandingPage() {
           <div className="shell">
             <div className="team-copy">
               <h2>Quienes somos</h2>
-              <p>Conoce al equipo detras de Hando</p>
+              <p>Conoce al equipo detrás de Hando</p>
             </div>
 
             <div className="team-grid">
