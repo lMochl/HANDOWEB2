@@ -1,5 +1,4 @@
 import {
-  ArrowRight,
   BadgeCheck,
   ChartNoAxesColumnIncreasing,
   ClipboardList,
@@ -10,8 +9,6 @@ import {
   Network,
   ShieldCheck,
   Sparkles,
-  TriangleAlert,
-  UserRound,
 } from "lucide-react";
 
 const approachPoints = [
@@ -56,6 +53,48 @@ const teamMembers = [
     text: "",
     image: "/1586991134800.webp",
     linkedin: "https://www.linkedin.com/in/ricardocaceresvillar/",
+  },
+  {
+    role: "UX/UI Designer",
+    name: "Isidora Céspedes",
+    text: "",
+    image: "/1688650546082.webp",
+    linkedin: "https://www.linkedin.com/in/isidora-cespedes-gaete/",
+  },
+  {
+    role: "Full Stack Developer",
+    name: "Matías Guiñez",
+    text: "",
+    image: "/1769560685229.webp",
+    linkedin: "https://www.linkedin.com/in/mat%C3%ADas-alexander-gui%C3%B1ez-monsalve/",
+  },
+  {
+    role: "CTO",
+    name: "Priscilla Vergara",
+    text: "",
+    image: "/1746765704898.webp",
+    linkedin: "https://www.linkedin.com/in/priscilla-vergara-c-1bab36179/",
+  },
+  {
+    role: "Hardware designer",
+    name: "Jorge Pérez",
+    text: "",
+    image: "/1745007035136.webp",
+    linkedin: "https://www.linkedin.com/in/jorge-pérez-torres-851530299/",
+  },
+  // {
+  //   role: "Student developer",
+  //   name: "Anita Lagos",
+  //   text: "",
+  //   image: "/.webp",
+  //   linkedin: "https://www.linkedin.com/in/anita-lagos-hermosilla-23ab26291/",
+  // },
+  {
+    role: "Full stack developer",
+    name: "Vicente Inostroza",
+    text: "",
+    image: "/1721068505558.webp",
+    linkedin: "https://www.linkedin.com/in/vicente-inostroza-5a8b4a231/",
   },
 ];
 
@@ -112,21 +151,16 @@ export default function HandoLandingPage() {
 
       <main>
         <section id="problema" className="hero-section">
-          <div className="shell hero-grid">
-            <div className="hero-copy">
-              <p className="hero-pill">
-                <span className="hero-pill-dot" aria-hidden="true" />
-                AI-POWERED HANDOVER
-              </p>
-              <h1>La calidad del handover también es seguridad del paciente.</h1>
+          <div className="shell">
+            <div className="hero-centered">
+              <h1>La calidad del <span className="highlight-underline">handover</span> también es seguridad del paciente.</h1>
               <p className="hero-text">
                 Hando ayuda a los equipos de salud a estructurar, centralizar y dar continuidad a la información clínica crítica entre turnos,
-                reduciendo perdidas de información y mejorando la coordinación asistencial.
+                reduciendo pérdidas de información, errores y mejorando la continuidad del cuidado.
               </p>
               <div className="hero-actions">
                 <a href="#contacto" className="cta-btn cta-primary">
                   <span>Solicitar contacto</span>
-                  <ArrowRight aria-hidden="true" strokeWidth={1.9} />
                 </a>
                 <a href="#solucion" className="cta-btn cta-secondary">
                   Conocer Hando
@@ -134,55 +168,50 @@ export default function HandoLandingPage() {
               </div>
             </div>
 
-            <article className="patient-panel" aria-label="Resumen de paciente en plataforma Hando">
-              <div className="patient-row patient-main-row">
-                <div>
-                  <p className="patient-title patient-title-row">
-                    <span className="patient-head-icon" aria-hidden="true">
-                      <UserRound strokeWidth={1.8} />
-                    </span>
-                    Paciente: Martínez, R.
-                  </p>
-                  <p className="patient-subtitle">Cama 402 • Ingreso: 12 h</p>
-                </div>
-                <span className="patient-tag">AI Synthesized</span>
-              </div>
-
-              <div className="patient-risk">
-                <p className="risk-label">
-                  <TriangleAlert aria-hidden="true" strokeWidth={1.9} />
-                  Riesgo Detectado por IA
-                </p>
-                <p>Posible interacción farmacológica: Heparina + AINES. Requiere revisión de dosis antes del turno de noche.</p>
-              </div>
-
-              <div className="vitals-grid">
-                <div>
-                  <p>FC (lpm)</p>
-                  <strong>84</strong>
-                </div>
-                <div>
-                  <p>PA (mmHg)</p>
-                  <strong>120/80</strong>
-                </div>
-                <div>
-                  <p>SpO2 (%)</p>
-                  <strong>98</strong>
+            <div className="hero-banners">
+              <div className="banner-full banner-ambulancia">
+                <img src="/banner_4.webp" alt="Ambulancia Banner" className="banner-bg" />
+                <div className="banner-content content-left content-row">
+                  <img src="/ambulancia_logo.webp" alt="Hando Ambulancia" className="banner-logo" />
+                  <div className="banner-text-box">
+                    <h4>Información continua</h4>
+                    <p>Hando Ambulancia permite generar registro confiable de los eventos en ambulancia ya que alerta proactivamente al hospital receptor, evitando que se pierdan pendientes importantes.</p>
+                  </div>
                 </div>
               </div>
-
-              <div className="care-plan">
-                <p className="care-title">Plan de Cuidado - Proximas 8 h</p>
-                <div className="care-row">
-                  <p>Control de laboratorios</p>
-                  <span>18:00</span>
-                </div>
-                <div className="care-row">
-                  <p>Ajuste de fluidoterapia</p>
-                  <span>22:00</span>
+              <div className="banner-full banner-calendar">
+                <img src="/banner_3.webp" alt="Calendar Banner" className="banner-bg" />
+                <div className="banner-content content-left">
+                  <img src="/calendar_logo.webp" alt="Hando Calendar" className="banner-logo" />
+                  <div className="banner-text-box">
+                    <h4>Mejor organización para equipos de la salud</h4>
+                    <p>Hando Calendar es nuestra propuesta para facilitar la organización de turnos, rotaciones y turnos vacantes de manera sencilla, rápida y limpia.</p>
+                  </div>
                 </div>
               </div>
-            </article>
+              <div className="banner-grid-half">
+                <div className="banner-half banner-science">
+                  <img src="/banner_2.webp" alt="Science Banner" className="banner-bg" />
+                  <div className="banner-content content-left">
+                    <img src="/science_logo.webp" alt="Hando Science" className="banner-logo" />
+                    <div className="banner-text-box">
+                      <h4>Conocimiento a la mano de todos</h4>
+                      <p>Una plataforma digital para personal del rubro de salud que entrega papers, investigaciones, resultados y diagnósticos de manera fácil y rápida.</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="banner-half banner-cirugia">
+                  <img src="/banner_1.webp" alt="Cirugia Banner" className="banner-bg" />
+                  <div className="banner-content content-left">
+                    <img src="/cirugia_logo.webp" alt="Hando Cirugia" className="banner-logo" />
+                    <div className="banner-text-box">
+                      <h4>Con Hando puedes cuidar información crítica</h4>
+                      <p>Hando Cirugía esta pensado para resguardar datos e información importante que puede llegar a perderse en la transición de turnos.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 

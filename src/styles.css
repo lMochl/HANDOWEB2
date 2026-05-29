@@ -36,6 +36,7 @@ p,
 h1,
 h2,
 h3,
+h4,
 ul {
   margin: 0;
 }
@@ -170,16 +171,9 @@ button {
     linear-gradient(115deg, #edf4f8 0%, #f8fbfd 56%, #e7f4f4 100%);
 }
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(340px, 1.02fr);
-  align-items: center;
-  gap: 34px;
-  padding: 84px 0 76px;
-}
+
 
 .hero-copy,
-.patient-panel,
 .risk-card,
 .benefit-card,
 .team-card,
@@ -187,34 +181,8 @@ button {
   animation: reveal-up 560ms ease both;
 }
 
-.patient-panel {
-  animation-delay: 80ms;
-}
 
-.hero-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  border-radius: 10px;
-  background: #d2ebf1;
-  border: 1px solid #bfdde7;
-  color: #284f63;
-  padding: 8px 14px;
-  font-size: 13px;
-  letter-spacing: 0.08em;
-  font-weight: 600;
-}
 
-.hero-pill-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 999px;
-  background: #33d3dc;
-  box-shadow: 0 0 0 3px rgba(51, 211, 220, 0.2);
-  flex: none;
-}
-
-.hero-copy h1,
 .risk-copy h2,
 .solution-intro h2,
 .solution-copy h2,
@@ -222,28 +190,6 @@ button {
 .contact-aside h2 {
   font-family: "Manrope", "Segoe UI", sans-serif;
   letter-spacing: -0.04em;
-}
-
-.hero-copy h1 {
-  margin-top: 20px;
-  max-width: 12ch;
-  font-size: clamp(42px, 6.8vw, 67px);
-  line-height: 1.04;
-}
-
-.hero-text {
-  margin-top: 20px;
-  max-width: 58ch;
-  font-size: 22px;
-  line-height: 1.56;
-  color: #334c5f;
-}
-
-.hero-actions {
-  margin-top: 30px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
 }
 
 .cta-btn {
@@ -289,166 +235,202 @@ button {
   background: #ffffff;
 }
 
-.patient-panel {
-  border: 1px solid #dbe5eb;
-  border-radius: var(--radius-xl);
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 32px 48px -36px rgba(12, 37, 58, 0.75), 0 10px 24px -22px rgba(12, 37, 58, 0.34);
-  padding: 22px;
+.hero-centered {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 84px 0 56px;
+  animation: reveal-up 560ms ease both;
 }
 
-.patient-row {
+.hero-centered h1 {
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  letter-spacing: -0.04em;
+  max-width: 25ch;
+  font-size: clamp(38px, 6.2vw, 56px);
+  line-height: 1.08;
+  margin: 0 auto;
+}
+
+.hero-centered .highlight-underline {
+  text-decoration: underline;
+  text-decoration-color: #367F85;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 6px;
+  color: #367F85;
+}
+
+.hero-centered .hero-text {
+  margin-top: 24px;
+  max-width: 78ch;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #334c5f;
+}
+
+.hero-centered .hero-actions {
+  margin-top: 36px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 16px;
 }
 
-.patient-title {
-  font-family: "Manrope", "Segoe UI", sans-serif;
-  font-size: 23px;
-  font-weight: 700;
-  color: #102a3b;
+.hero-banners {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 76px;
+  animation: reveal-up 560ms ease both;
+  animation-delay: 120ms;
 }
 
-.patient-title-row {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+.banner-full {
+  position: relative;
+  width: 100%;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 16px 40px -16px rgba(12, 37, 58, 0.2);
 }
 
-.patient-title-row svg {
-  width: 16px;
-  height: 16px;
-  color: #35586f;
-  flex: none;
+.banner-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  z-index: 0;
 }
 
-.patient-head-icon {
-  width: 28px;
-  height: 28px;
-  border-radius: 7px;
-  border: 1px solid #d6dee5;
-  background: #eef2f5;
-  display: inline-flex;
+.banner-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 48px;
+  min-height: 380px;
+}
+
+.content-center {
   align-items: center;
   justify-content: center;
-  flex: none;
+  text-align: center;
 }
 
-.patient-head-icon svg {
-  width: 15px;
-  height: 15px;
-  color: #4a6678;
+.content-left {
+  align-items: flex-start;
+  justify-content: flex-end;
+  text-align: left;
 }
 
-.patient-subtitle {
-  margin-top: 4px;
-  color: #51697a;
-  font-size: 15px;
+.content-row {
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 24px;
 }
 
-.patient-tag {
-  border: 1px solid #bee5e7;
-  background: #d6f6f4;
-  color: #245967;
-  border-radius: 999px;
-  font-size: 13px;
-  font-weight: 600;
-  white-space: nowrap;
-  padding: 7px 12px;
+.banner-logo {
+  object-fit: contain;
+  margin-bottom: 20px;
 }
 
-.patient-risk {
-  margin-top: 16px;
-  border: 1px solid #cde9e9;
-  border-left: 4px solid #2ecdc4;
-  border-radius: 10px;
-  background: #f2fcfc;
-  padding: 14px 14px 14px 12px;
+.content-row .banner-logo {
+  margin-bottom: 0;
 }
 
-.risk-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+.banner-ambulancia .banner-logo {
+  height: 110px;
+}
+
+.banner-calendar .banner-logo {
+  height: 110px;
+}
+
+.banner-science .banner-logo,
+.banner-cirugia .banner-logo {
+  height: 95px;
+}
+
+.banner-text-box {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 12px;
+  padding: 16px 24px 20px;
+  max-width: 600px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.banner-text-box h4 {
   font-family: "Manrope", "Segoe UI", sans-serif;
-  color: #10374c;
-  font-size: 16px;
+  font-size: 19px;
   font-weight: 700;
+  margin-bottom: 10px;
+  color: #10293c;
 }
 
-.risk-label svg {
-  width: 16px;
-  height: 16px;
-  color: #12a8be;
-  flex: none;
-}
-
-.patient-risk p:last-child {
-  margin-top: 6px;
+.banner-text-box p {
   font-size: 14px;
   line-height: 1.5;
-  color: #3f5666;
+  margin: 0;
+  color: #10293c;
 }
 
-.vitals-grid {
-  margin-top: 16px;
+/* Colors and specifics */
+.banner-ambulancia .banner-content {
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.banner-ambulancia .banner-text-box {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  text-align: left;
+  max-width: 540px;
+}
+
+.banner-calendar .banner-content {
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.banner-calendar .banner-text-box {
+  background: rgba(255, 255, 255, 0.5);
+  max-width: 480px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.banner-science .banner-content,
+.banner-cirugia .banner-content {
+  padding: 32px;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.banner-science .banner-text-box,
+.banner-cirugia .banner-text-box {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  max-width: 100%;
+  min-height: 138px;
+}
+
+.banner-grid-half {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
 }
 
-.vitals-grid div {
-  border: 1px solid #d6e2e8;
-  border-radius: 9px;
-  background: #f9fbfc;
-  padding: 10px 11px;
+.banner-half {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 16px 40px -16px rgba(12, 37, 58, 0.2);
 }
 
-.vitals-grid p {
-  color: #587082;
-  font-size: 13px;
-}
 
-.vitals-grid strong {
-  display: block;
-  margin-top: 4px;
-  font-size: 24px;
-  color: #173146;
-  font-family: "Manrope", "Segoe UI", sans-serif;
-}
-
-.care-plan {
-  margin-top: 16px;
-}
-
-.care-title {
-  font-size: 15px;
-  font-family: "Manrope", "Segoe UI", sans-serif;
-  font-weight: 700;
-}
-
-.care-row {
-  margin-top: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-  border-bottom: 1px solid #dde6ec;
-  padding-bottom: 8px;
-}
-
-.care-row p {
-  color: #335063;
-  font-size: 14px;
-}
-
-.care-row span {
-  color: #4b6374;
-  font-size: 14px;
-  font-weight: 600;
-}
 
 .risk-section,
 .solution-section,
@@ -864,7 +846,7 @@ button {
 .team-grid {
   margin-top: 40px;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 28px;
 }
 
@@ -912,7 +894,7 @@ button {
 
 .team-card h3 {
   margin: 0;
-  font-size: clamp(28px, 4vw, 42px);
+  font-size: clamp(24px, 3.2vw, 34px);
 }
 
 .member-link {
@@ -1168,19 +1150,13 @@ button {
 }
 
 @media (max-width: 1120px) {
+  .team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 
-  .hero-grid,
   .risk-grid,
   .focus-board {
     grid-template-columns: 1fr;
-  }
-
-  .hero-copy h1 {
-    max-width: none;
-  }
-
-  .hero-text {
-    max-width: 65ch;
   }
 
   .benefit-card-1,
@@ -1232,7 +1208,7 @@ button {
   }
 
   .risk-copy p,
-  .hero-text,
+  .hero-centered .hero-text,
   .focus-list span,
   .benefit-card p,
   .team-card p {
@@ -1265,7 +1241,10 @@ button {
     font-size: 13px;
   }
 
-  .hero-grid,
+  .hero-centered {
+    padding-top: 56px;
+  }
+
   .risk-section,
   .solution-section,
   .team-section,
@@ -1274,7 +1253,7 @@ button {
     padding-bottom: 56px;
   }
 
-  .hero-copy h1 {
+  .hero-centered h1 {
     font-size: clamp(34px, 10vw, 52px);
   }
 
@@ -1283,21 +1262,45 @@ button {
     grid-template-columns: 1fr;
   }
 
-  .hero-actions {
+  .hero-centered .hero-actions {
     display: grid;
+  }
+
+  .banner-grid-half {
+    grid-template-columns: 1fr;
+  }
+
+  .banner-content {
+    padding: 24px;
+    min-height: 280px;
+  }
+
+  .content-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .banner-ambulancia .banner-content {
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+
+  .banner-logo {
+    height: 65px;
+  }
+
+  .banner-text-box {
+    padding: 16px;
+  }
+
+  .banner-science .banner-text-box,
+  .banner-cirugia .banner-text-box {
+    min-height: auto;
   }
 
   .cta-btn {
     width: 100%;
-  }
-
-  .patient-row {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .vitals-grid {
-    grid-template-columns: 1fr;
   }
 
   .fragmented-notes {
