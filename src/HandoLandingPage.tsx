@@ -76,7 +76,14 @@ const teamMembers = [
     linkedin: "https://www.linkedin.com/in/priscilla-vergara-c-1bab36179/",
   },
   {
-    role: "Hardware designer",
+    role: "Full stack developer",
+    name: "Vicente Inostroza",
+    text: "",
+    image: "/1721068505558.webp",
+    linkedin: "https://www.linkedin.com/in/vicente-inostroza-5a8b4a231/",
+  },
+  {
+    role: "Student Hardware Developer",
     name: "Jorge Pérez",
     text: "",
     image: "/1745007035136.webp",
@@ -89,13 +96,6 @@ const teamMembers = [
   //   image: "/.webp",
   //   linkedin: "https://www.linkedin.com/in/anita-lagos-hermosilla-23ab26291/",
   // },
-  {
-    role: "Full stack developer",
-    name: "Vicente Inostroza",
-    text: "",
-    image: "/1721068505558.webp",
-    linkedin: "https://www.linkedin.com/in/vicente-inostroza-5a8b4a231/",
-  },
 ];
 
 function LinkedInIcon() {
