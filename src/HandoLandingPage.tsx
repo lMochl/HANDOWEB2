@@ -89,13 +89,13 @@ const teamMembers = [
     image: "/1745007035136.webp",
     linkedin: "https://www.linkedin.com/in/jorge-pérez-torres-851530299/",
   },
-  // {
-  //   role: "Student developer",
-  //   name: "Anita Lagos",
-  //   text: "",
-  //   image: "/.webp",
-  //   linkedin: "https://www.linkedin.com/in/anita-lagos-hermosilla-23ab26291/",
-  // },
+  {
+    role: "Student developer",
+    name: "Anita Lagos",
+    text: "",
+    image: "/187260685229.webp",
+    linkedin: "https://www.linkedin.com/in/anita-lagos-hermosilla-23ab26291/",
+  },
 ];
 
 function LinkedInIcon() {
