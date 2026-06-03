@@ -76,11 +76,19 @@ const teamMembers = [
     linkedin: "https://www.linkedin.com/in/priscilla-vergara-c-1bab36179/",
   },
   {
-    role: "Full stack developer",
+    role: "Full Stack Developer",
     name: "Vicente Inostroza",
     text: "",
     image: "/1721068505558.webp",
     linkedin: "https://www.linkedin.com/in/vicente-inostroza-5a8b4a231/",
+  },
+  
+  {
+    role: "Student Developer",
+    name: "Anita Lagos",
+    text: "",
+    image: "/187260685229.webp",
+    linkedin: "https://www.linkedin.com/in/anita-lagos-hermosilla-23ab26291/",
   },
   {
     role: "Student Hardware Developer",
@@ -88,13 +96,6 @@ const teamMembers = [
     text: "",
     image: "/1745007035136.webp",
     linkedin: "https://www.linkedin.com/in/jorge-pérez-torres-851530299/",
-  },
-  {
-    role: "Student developer",
-    name: "Anita Lagos",
-    text: "",
-    image: "/187260685229.webp",
-    linkedin: "https://www.linkedin.com/in/anita-lagos-hermosilla-23ab26291/",
   },
 ];
 
