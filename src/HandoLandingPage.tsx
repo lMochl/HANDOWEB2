@@ -160,11 +160,11 @@ export default function HandoLandingPage() {
                 reduciendo pérdidas de información, errores y mejorando la continuidad del cuidado.
               </p>
               <div className="hero-actions">
-                <a href="#contacto" className="cta-btn cta-primary">
-                  <span>Solicitar contacto</span>
+                <a href="#solucion" className="cta-btn cta-primary">
+                  <span>Conocer Hando</span>
                 </a>
-                <a href="#solucion" className="cta-btn cta-secondary">
-                  Conocer Hando
+                <a href="#equipo" className="cta-btn cta-secondary">
+                  Nuestro equipo
                 </a>
               </div>
             </div>
