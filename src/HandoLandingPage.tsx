@@ -371,7 +371,7 @@ export default function HandoLandingPage() {
               <div className="contact-email-panel" aria-label="Correo de contacto">
                 <p className="contact-email-kicker">Correo de contacto</p>
                 <a href="mailto:contacto@hando.cl" className="contact-email-link">
-                  contacto@hando.health
+                   felipe@hando.health & ricardo@hando.health
                 </a>
               </div>
             </div>
