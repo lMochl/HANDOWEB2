@@ -1,75 +1,86 @@
-import { Menu, X } from "lucide-react";
-import { useState } from "react";
-
+import { useEffect, useState } from "react";
+import Menu from "lucide-react/dist/esm/icons/menu.js";
+import X from "lucide-react/dist/esm/icons/x.js";
 export type SitePage = "home" | "calendar" | "science" | "team" | "contact";
-
-const navItems: Array<{ page: SitePage; label: string; href: string }> = [
-  { page: "home", label: "Hando", href: "/" },
-  { page: "calendar", label: "Calendar", href: "/calendar.html" },
-  { page: "science", label: "Science", href: "/science.html" },
-  { page: "team", label: "Equipo", href: "/equipo.html" },
-  { page: "contact", label: "Contacto", href: "/contacto.html" },
+const links: Array<{ page: SitePage; label: string; href: string }> = [
+  { page: "home", label: "Hando", href: "index.html" },
+  { page: "calendar", label: "Calendar", href: "calendar.html" },
+  { page: "science", label: "Science", href: "science.html" },
+  { page: "team", label: "Equipo", href: "equipo.html" },
+  { page: "contact", label: "Contacto", href: "contacto.html" },
 ];
-
 export default function SiteHeader({ activePage }: { activePage: SitePage }) {
-  const [menuOpen, setMenuOpen] = useState(false);
-
+  const [open, setOpen] = useState(false);
+  useEffect(() => {
+    if (!open) return;
+    const close = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", close);
+    return () => window.removeEventListener("keydown", close);
+  }, [open]);
   return (
-    <header className="site-header">
+    <header className={"site-header header-" + activePage}>
       <div className="site-shell header-inner">
-        <a className="site-logo" href="/" aria-label="Ir al inicio de Hando">
-          <img src="/hando-design/logos/hando.svg" alt="Hando" />
+        <a
+          className="site-brand"
+          href="index.html"
+          aria-label="Hando, inicio"
+        >
+          <img className="figma-svg" src="/figma/home/imgGroup85.svg" alt="" />
+          <span>Hando</span>
         </a>
-
         <nav className="desktop-navigation" aria-label="Navegación principal">
-          {navItems.map((item) => (
+          {links.map((link) => (
             <a
-              key={item.page}
-              href={item.href}
-              className={item.page === activePage ? "is-active" : undefined}
-              aria-current={item.page === activePage ? "page" : undefined}
+              key={link.page}
+              href={link.href}
+              className={link.page === activePage ? "is-active" : undefined}
+              aria-current={link.page === activePage ? "page" : undefined}
             >
-              {item.label}
+              {link.label}
             </a>
           ))}
         </nav>
-
-        <a className="button button-dark header-quote" href="/contacto.html">
+        <a className="header-quote brand-dark" href="contacto.html">
           Solicitar cotización
         </a>
-
         <button
-          className="mobile-menu-button"
+          className="menu-toggle"
           type="button"
-          aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
-          aria-expanded={menuOpen}
+          onClick={() => setOpen((v) => !v)}
+          aria-expanded={open}
           aria-controls="mobile-navigation"
-          onClick={() => setMenuOpen((open) => !open)}
+          aria-label={open ? "Cerrar menú" : "Abrir menú"}
         >
-          {menuOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
+          {open ? (
+            <X size={20} aria-hidden="true" />
+          ) : (
+            <Menu size={20} aria-hidden="true" />
+          )}
         </button>
       </div>
-
-      <nav
-        id="mobile-navigation"
-        className={`mobile-navigation${menuOpen ? " is-open" : ""}`}
-        aria-label="Navegación móvil"
-      >
-        {navItems.map((item) => (
-          <a
-            key={item.page}
-            href={item.href}
-            className={item.page === activePage ? "is-active" : undefined}
-            aria-current={item.page === activePage ? "page" : undefined}
-            onClick={() => setMenuOpen(false)}
-          >
-            {item.label}
+      {open && (
+        <nav
+          id="mobile-navigation"
+          className="mobile-navigation"
+          aria-label="Navegación móvil"
+        >
+          {links.map((link) => (
+            <a
+              key={link.page}
+              href={link.href}
+              aria-current={link.page === activePage ? "page" : undefined}
+              onClick={() => setOpen(false)}
+            >
+              {link.label}
+            </a>
+          ))}
+          <a className="mobile-quote brand-dark" href="contacto.html">
+            Solicitar cotización
           </a>
-        ))}
-        <a className="button button-primary" href="/contacto.html" onClick={() => setMenuOpen(false)}>
-          Solicitar cotización
-        </a>
-      </nav>
+        </nav>
+      )}
     </header>
   );
 }
