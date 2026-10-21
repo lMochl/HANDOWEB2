@@ -517,9 +517,6 @@ function HandoVision() {
                   <span className="leading-[72px]">T</span>
                   <span className="font-display leading-[72px] not-italic font-normal">{`ecnología `}</span>
                   <span className="leading-[72px]">al servicio</span>
-                  <span className="font-display leading-[72px] not-italic font-normal">
-                    ,
-                  </span>
                   <span className="font-display leading-[72px] not-italic text-[#3d869c] font-normal">{` `}</span>
                 </span>
                 <span className="leading-[72px] text-[#3d869c] text-[72px] block">
@@ -540,7 +537,7 @@ function HandoVision() {
                 las personas. Cada solución que desarrollamos parte de un
                 problema real y busca mejorar la manera en que los equipos
                 coordinan, comunican y toman decisiones. Todo desarrollado con
-                las personas como enfoque central.
+                las personas como elemento central.
               </p>
             </div>
           </div>
