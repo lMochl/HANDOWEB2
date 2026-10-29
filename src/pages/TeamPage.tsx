@@ -527,24 +527,6 @@ function TeamMembers() {
           </div>
         </article>
       </div>
-      <div
-        data-node-id="140:1450"
-        data-name="Container:margin"
-        className="content-stretch flex flex-col items-center pt-[24px] relative shrink-0 w-full"
-      >
-        <div
-          data-node-id="140:1451"
-          data-name="Container"
-          data-columns="2"
-          style={{
-            gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
-            gridTemplateRows: "minmax(483px, auto)",
-          }}
-          className="gap-x-[24px] gap-y-[24px] h-[529px] inline-grid max-w-[768px] relative shrink-0 figma-adaptive-height figma-grid"
-        >
-          
-        </div>
-      </div>
     </section>
   );
 }
